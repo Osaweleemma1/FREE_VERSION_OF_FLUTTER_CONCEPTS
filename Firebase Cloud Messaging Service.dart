@@ -28,7 +28,7 @@ void main() {
   }
 
   //NB: when the arguments 3 and 5 are passed to a and be respectively the body of the function addNumbers() goes to work,
-  // adds the value received together and the holds the total. It is that total that is now saved in sum variable and the printed
+  // adds the value received together and then holds the total. It is that total that is now saved in sum variable and then printed
   int sum = addNumbers(3,
       5); //3 and 5 here are arguments being passed to the parameters, a and b respectively
   print('Sum: $sum'); // printing the sum to console
