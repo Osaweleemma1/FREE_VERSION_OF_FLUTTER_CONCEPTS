@@ -983,6 +983,79 @@ else{
 }
 
 
+///**************ADDITIONAL TIP ON HTTP.GET--------------------------------
+///ASSUMMING YOU HAVE AN END POINT WHERE YOU WANT TO GET SOME RESPONSE AND PRINT TO CONSOLE
+
+/*
+First, response should carry the response of the api request . E.g
+
+var response = await http.get(url);
+
+*where url is the end point of the api
+
+Then the next thing you should do, is save the entire response body in a variable  , probably called body.
+
+var body = json.decode(response.body);
+
+*json.decode to decode the response we got after making the api request
+
+
+Then the next thing will be to print the Value/FIELD you want to print.
+
+I assume your json body is ;
+
+{
+  "S": [
+    "Value 0",
+    "Value 1",
+    "Value 2"
+  ]
+}
+
+
+Then print the first value like this;
+
+var value0 = body["S"][0];
+
+print(value0);
+
+To access the value at index 0, you would use body["S"][0] because body["S"] returns the array, and [0] accesses the element at index 0 within that array.
+
+
+
+
+But assuming the json body is like this;
+
+{
+  "S": {
+    "0": "Value for key 0",
+    "1": "Value for key 1",
+    "2": "Value for key 2"
+  }
+}
+
+
+Then to print "0" field value , you would need to do this;
+
+
+var value0 = body["S"]["0"];
+
+print(value0);
+
+"S" is the key to access the nested map, and "0" is the key to access the value within that nested map associated with the key "0".
+
+
+*/
+
+
+
+
+
+
+///-----------------------------------------
+
+
+
 
 ///PACKAGES:
 /*
